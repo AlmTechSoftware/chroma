@@ -1,5 +1,5 @@
 {
-  "name": "chromadb",
+  "name": "@ingenuity/chromadb",
   "version": "1.8.1",
   "description": "A JavaScript interface for chroma",
   "keywords": [],

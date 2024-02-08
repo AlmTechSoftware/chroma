@@ -149,7 +149,7 @@ export class ChromaClient {
         if (embeddingFunction === undefined) {
             embeddingFunction = new DefaultEmbeddingFunction();
         }
-      
+
         const newCollection = await this.api
             .createCollection(this.tenant, this.database, {
                 name,
@@ -288,6 +288,7 @@ export class ChromaClient {
             .catch(handleError);
 
         if (response.error) {
+            console.error("Internal chroma response error: ", response.error);
             throw new Error(response.error);
         }
 
